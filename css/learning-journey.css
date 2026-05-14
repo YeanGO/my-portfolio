@@ -1,0 +1,235 @@
+.learning-hero {
+  position: relative;
+  padding: 78px 0 38px;
+  border-bottom: 1px solid rgba(105, 232, 255, 0.12);
+}
+
+.learning-hero::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(57, 213, 238, 0.72), transparent 62%);
+}
+
+.learning-hero h1 {
+  margin: 0;
+  font-size: clamp(2.35rem, 5vw, 4.65rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.learning-hero p:not(.section-kicker),
+.learning-copy p {
+  max-width: 900px;
+  margin: 20px 0 0;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+}
+
+.learning-copy p + p {
+  margin-top: 16px;
+}
+
+.learning-section {
+  padding: 52px 0 0;
+}
+
+.learning-section .section-heading {
+  margin-bottom: 24px;
+}
+
+.learning-section .section-heading h2,
+.learning-next h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1.25;
+}
+
+.journey-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: 8%;
+  left: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(105, 232, 255, 0.48), transparent);
+}
+
+.timeline-card,
+.learning-card,
+.project-link-card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgba(105, 232, 255, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(57, 213, 238, 0.045), transparent 42%),
+    rgba(7, 19, 31, 0.74);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.timeline-card::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 18px rgba(57, 213, 238, 0.65);
+}
+
+.timeline-card:hover,
+.learning-card:hover,
+.project-link-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(105, 232, 255, 0.42);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.26), 0 0 24px rgba(57, 213, 238, 0.12);
+}
+
+.timeline-time {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: var(--color-accent-strong);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.timeline-card h3,
+.learning-card h3,
+.project-link-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-text);
+  font-size: 1.14rem;
+  line-height: 1.35;
+}
+
+.timeline-card p,
+.learning-card p,
+.project-link-card p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.learning-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--color-muted);
+}
+
+.learning-card a {
+  display: inline-flex;
+  margin-top: 14px;
+  color: var(--color-accent-strong);
+  font-weight: 800;
+}
+
+.learning-card-grid,
+.capability-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.three-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.two-columns,
+.capability-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.learning-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.learning-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid rgba(105, 232, 255, 0.22);
+  border-radius: 999px;
+  color: var(--color-accent-strong);
+  background: rgba(10, 26, 40, 0.58);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.project-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-link-card .button {
+  margin-top: auto;
+}
+
+.learning-next {
+  margin: 58px 0 86px;
+  padding: clamp(24px, 4vw, 36px);
+  border: 1px solid rgba(105, 232, 255, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(57, 213, 238, 0.07), transparent 42%),
+    rgba(8, 20, 32, 0.8);
+}
+
+.learning-next-tags {
+  margin: 22px 0 26px;
+}
+
+@media (max-width: 980px) {
+  .journey-timeline,
+  .three-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journey-timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .learning-hero {
+    padding: 46px 0 30px;
+  }
+
+  .journey-timeline,
+  .three-columns,
+  .two-columns,
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-link-card .button,
+  .learning-next .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .learning-tags span {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
