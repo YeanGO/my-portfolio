@@ -1,0 +1,97 @@
+.project-detail-main {
+  padding-bottom: 88px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  margin: 46px 0 24px;
+  padding: 0 14px;
+  border: 1px solid rgba(105, 232, 255, 0.22);
+  border-radius: 8px;
+  color: var(--color-muted);
+  background: rgba(8, 21, 34, 0.58);
+  font-weight: 800;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--color-accent-strong);
+  border-color: rgba(105, 232, 255, 0.52);
+  background: rgba(57, 213, 238, 0.1);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.project-detail-section {
+  margin-bottom: 0;
+}
+
+.project-detail-header h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.project-detail-section .project-block h2,
+.project-detail-section .github-panel h2 {
+  margin: 0 0 18px;
+  color: var(--color-text);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.project-detail-section .project-block h2::before,
+.project-detail-section .github-panel h2::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 14px rgba(57, 213, 238, 0.7);
+  vertical-align: 12%;
+}
+
+.project-detail-section .block-heading h3,
+.project-detail-section .info-card h3 {
+  margin: 0 0 8px;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.detail-closing {
+  padding: 26px;
+  border: 1px solid rgba(105, 232, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(57, 213, 238, 0.045);
+}
+
+@media (max-width: 760px) {
+  .back-link {
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .project-detail-header h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .project-detail-section .project-block h2::before,
+  .project-detail-section .github-panel h2::before {
+    display: none;
+  }
+
+  .detail-closing {
+    padding: 18px;
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="360 度績效互評系統作品詳細頁，完整介紹專案背景、成果展示、系統設計、技術實作與學習收穫。">
+  <title>360 度績效互評系統 | JY Li</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="主要導覽">
+      <a class="brand" href="index.html" aria-label="JY Li 首頁">JY Li</a>
+
+      <button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-controls="primary-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="primary-menu">
+        <li><a class="nav-link" href="index.html">首頁</a></li>
+        <li><a class="nav-link active" href="projects.html" aria-current="page">作品集</a></li>
+        <li><a class="nav-link" href="learning-journey.html">學習歷程</a></li>
+        <li><a class="nav-link" href="research.html">研究方向</a></li>
+        <li><a class="nav-link" href="resume.html">履歷</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-detail-main">
+    <a class="back-link" href="projects.html">← 返回作品集總覽</a>
+
+    <article class="project-section project-detail-section" aria-labelledby="pa360-title">
+      <header class="project-header project-detail-header">
+        <div>
+          <p class="project-index">Project Detail</p>
+          <h1 id="pa360-title">01｜360 度績效互評系統</h1>
+        </div>
+        <span class="project-badge">課程：Python 程式設計</span>
+      </header>
+
+      <p class="project-positioning">以企業績效評核流程為發想，實作多角色互動的資訊系統。</p>
+
+      <section class="project-block" aria-labelledby="intro-title">
+        <h2 id="intro-title">專案簡介</h2>
+        <div class="text-stack">
+          <p><strong>360 度績效互評系統</strong>是一套以多來源評核概念為核心的網頁系統，模擬企業或組織中由不同角色共同參與評價與分析的流程。系統整合了<strong>自我評量</strong>、<strong>同儕互評</strong>、<strong>教師評分</strong>與<strong>管理者分析</strong>等功能，並透過資料彙整與權重計算，產出可供檢視的綜合評核結果。</p>
+          <p>本專案使用 <strong>Python FastAPI</strong> 建立後端服務，搭配前端網頁介面與資料庫設計，完成從使用者登入、評分資料送出、後端儲存、綜合分數計算，到後台分析呈現的完整流程。</p>
+        </div>
+      </section>
+
+      <section class="github-panel" aria-labelledby="github-title">
+        <div>
+          <h2 id="github-title">GitHub 專案連結</h2>
+          <p>專案原始碼與系統實作內容已整理於 GitHub Repository。</p>
+        </div>
+        <!-- TODO: 將 href="#" 替換為正式 GitHub Repository URL。 -->
+        <a class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">查看 GitHub 原始碼</a>
+      </section>
+
+      <section class="project-block" aria-labelledby="showcase-title">
+        <h2 id="showcase-title">專案成果展示</h2>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>系統操作展示</h3>
+            <p>下方影片示範 360 度績效互評系統的主要操作流程，包括角色登入、自評與互評機制、教師評分，以及管理者後台分析功能。</p>
+          </div>
+          <div class="video-frame">
+            <iframe
+              src=""
+              title="360 度績效互評系統操作展示影片"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <div class="video-placeholder">YouTube Embed URL 預留區</div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>系統架構圖</h3>
+            <p>此架構圖呈現系統主要組成，包括前端頁面、FastAPI 後端服務、資料庫儲存，以及不同角色操作流程之間的資料互動關係。</p>
+          </div>
+          <figure class="media-card media-card-wide">
+            <div class="image-placeholder" data-image="assets/images/projects/pa360-system-architecture.png">
+              系統架構圖預留區
+            </div>
+            <figcaption>系統架構圖</figcaption>
+          </figure>
+        </div>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>系統畫面展示</h3>
+            <p>以下畫面呈現系統中具代表性的功能頁面，協助快速理解使用者操作流程與後台分析介面。</p>
+          </div>
+          <div class="screenshot-grid">
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-login.png">登入頁面截圖預留區</div>
+              <figcaption>登入與角色導向</figcaption>
+            </figure>
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-student-evaluation.png">學生評分頁面截圖預留區</div>
+              <figcaption>學生自評與同儕互評介面</figcaption>
+            </figure>
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-teacher-evaluation.png">教師評分頁面截圖預留區</div>
+              <figcaption>教師評分操作介面</figcaption>
+            </figure>
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-admin-analysis.png">管理者分析頁面截圖預留區</div>
+              <figcaption>管理者後台分析結果</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="motivation-title">
+        <h2 id="motivation-title">專案發想與設計動機</h2>
+        <div class="text-stack">
+          <p>在過去企業管理與人力資源工作的經驗中，我經常接觸績效評核、員工發展與跨角色意見整合等議題。<br>因此在 Python 程式設計課程中，我選擇以「<strong>360 度績效互評</strong>」作為系統開發主題，嘗試將熟悉的企業流程轉化為可操作的資訊系統。</p>
+          <p>本專案希望達成三個目標：</p>
+        </div>
+        <div class="goal-grid">
+          <div class="info-card">將多角色評核流程數位化，呈現從資料輸入到結果分析的完整系統邏輯。</div>
+          <div class="info-card">練習前後端資料串接、API 設計與資料庫儲存。</div>
+          <div class="info-card">結合既有流程理解與資訊技術，建立具有實務情境的系統作品。</div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="roles-title">
+        <h2 id="roles-title">系統角色與流程設計</h2>
+        <p class="block-intro">系統依據評核流程設計不同角色與操作權限，模擬組織中多方共同參與評估的情境。</p>
+
+        <div class="role-grid">
+          <div class="info-card">
+            <h3>學生 / 受評者</h3>
+            <p>進行自我評量，並完成指定對象的同儕互評。</p>
+          </div>
+          <div class="info-card">
+            <h3>教師 / 評核者</h3>
+            <p>針對學生進行評分。</p>
+          </div>
+          <div class="info-card">
+            <h3>管理者</h3>
+            <p>檢視整體評核結果、加權分數與分析資訊。</p>
+          </div>
+        </div>
+
+        <ol class="process-list">
+          <li>使用者登入系統後，依身份進入不同操作頁面。</li>
+          <li>學生完成自我評量與同儕互評。</li>
+          <li>教師完成指定對象的評核。</li>
+          <li>系統彙整不同來源的評分資料。</li>
+          <li>依設定權重計算綜合結果。</li>
+          <li>管理者於後台檢視統計結果與分析資訊。</li>
+        </ol>
+      </section>
+
+      <section class="project-block" aria-labelledby="features-title">
+        <h2 id="features-title">核心功能</h2>
+        <div class="feature-grid">
+          <div class="info-card">
+            <h3>多角色登入與權限區分</h3>
+            <p>系統根據登入身份導向不同頁面，使學生、教師與管理者各自執行對應功能。</p>
+          </div>
+          <div class="info-card">
+            <h3>自評、同儕互評與教師評核</h3>
+            <p>設計不同評核來源，模擬 360 度評核中多方回饋的資料蒐集方式。</p>
+          </div>
+          <div class="info-card">
+            <h3>六項能力指標評分</h3>
+            <p>系統以六個構面進行評價，可對應到工作態度、工作績效、紀律規範、專業能力、學習成長與溝通協作等面向，建立更具結構性的評核資料。</p>
+          </div>
+          <div class="info-card">
+            <h3>綜合權重計算</h3>
+            <p>系統將自評、同儕評核與教師評分依設定比例進行加權計算，產出綜合評核結果。</p>
+          </div>
+          <div class="info-card">
+            <h3>後台總覽與分析</h3>
+            <p>管理者可檢視整體評核資料、分數彙整與視覺化結果，協助快速掌握個別受評者的整體表現。</p>
+          </div>
+          <div class="info-card">
+            <h3>評核結果延伸分析</h3>
+            <p>系統進一步將評核分數轉化為多維度特徵，並進行相似性分析與結果呈現，提升資料應用層次。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="tech-title">
+        <h2 id="tech-title">技術實作</h2>
+        <div class="tech-tags" aria-label="使用技術">
+          <span>Python</span>
+          <span>FastAPI</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>SQLite</span>
+          <span>RESTful API</span>
+          <span>Git</span>
+          <span>GitHub</span>
+        </div>
+
+        <div class="tech-grid">
+          <div class="info-card">
+            <h3>1. 前後端資料串接</h3>
+            <p>前端頁面透過 API 與後端 FastAPI 服務互動，完成登入驗證、評分資料取得與評分結果送出。</p>
+          </div>
+          <div class="info-card">
+            <h3>2. 評分資料結構設計</h3>
+            <p>針對自評、同儕互評與教師評分建立對應資料儲存方式，使系統能正確彙整不同來源的分數。</p>
+          </div>
+          <div class="info-card">
+            <h3>3. 評核結果聚合邏輯</h3>
+            <p>後端負責整合各類評分資料，並依照設定權重計算最終分數，建立可供後台分析使用的結果資料。</p>
+          </div>
+          <div class="info-card">
+            <h3>4. 多角色頁面流程</h3>
+            <p>依據不同使用者身份設計專屬頁面，呈現完整的業務流程與系統導覽邏輯。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block project-closing detail-closing" aria-labelledby="learning-title">
+        <h2 id="learning-title">專案成果與學習收穫</h2>
+        <p>透過此專案，我將原本熟悉的企業績效評核概念轉化為具體的資訊系統，完整經歷了：</p>
+        <ul class="learning-list">
+          <li>問題情境定義</li>
+          <li>系統功能拆解</li>
+          <li>資料結構規劃</li>
+          <li>前後端功能串接</li>
+          <li>評分邏輯實作</li>
+          <li>管理端分析呈現</li>
+        </ul>
+        <p>這個專案讓我不只練習 Python 程式設計，也進一步理解<strong>資訊系統開發需要同時兼顧需求分析、流程設計、資料處理與使用者操作情境</strong>。<br>對我後續朝資訊系統開發與金融業 IT 發展而言，是一項具有代表性的完整實作成果。</p>
+      </section>
+    </article>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
