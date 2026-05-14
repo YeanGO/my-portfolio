@@ -1,0 +1,18 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">A circular placeholder for a future profile photo at assets/images/profile.jpg.</desc>
+  <rect width="640" height="640" rx="320" fill="#0B1A29"/>
+  <circle cx="320" cy="320" r="305" fill="url(#paint0_radial)" stroke="#39D5EE" stroke-opacity="0.28" stroke-width="2"/>
+  <circle cx="320" cy="238" r="92" fill="#173047" stroke="#69E8FF" stroke-opacity="0.45" stroke-width="8"/>
+  <path d="M164 500C185 416 246 372 320 372C394 372 455 416 476 500" fill="#14283D"/>
+  <path d="M164 500C185 416 246 372 320 372C394 372 455 416 476 500" stroke="#69E8FF" stroke-opacity="0.4" stroke-width="8" stroke-linecap="round"/>
+  <path d="M201 154L154 201M486 201L439 154M201 486L154 439M486 439L439 486" stroke="#39D5EE" stroke-opacity="0.28" stroke-width="8" stroke-linecap="round"/>
+  <path d="M320 82V128M320 512V558M82 320H128M512 320H558" stroke="#39D5EE" stroke-opacity="0.22" stroke-width="8" stroke-linecap="round"/>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 240) rotate(90) scale(350)">
+      <stop stop-color="#173C58"/>
+      <stop offset="0.55" stop-color="#0B1A29"/>
+      <stop offset="1" stop-color="#06101B"/>
+    </radialGradient>
+  </defs>
+</svg>
