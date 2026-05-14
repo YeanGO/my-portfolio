@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PA360 雲端部署實作作品詳細頁，介紹 AWS EC2、Docker、Docker Compose、Nginx 與 FastAPI 的部署流程。">
+  <title>PA360 雲端部署實作 | JY Li</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="主要導覽">
+      <a class="brand" href="index.html" aria-label="JY Li 首頁">JY Li</a>
+
+      <button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-controls="primary-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="primary-menu">
+        <li><a class="nav-link" href="index.html">首頁</a></li>
+        <li><a class="nav-link active" href="projects.html" aria-current="page">作品集</a></li>
+        <li><a class="nav-link" href="learning-journey.html">學習歷程</a></li>
+        <li><a class="nav-link" href="research.html">研究方向</a></li>
+        <li><a class="nav-link" href="resume.html">履歷</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-detail-main">
+    <a class="back-link" href="projects.html">← 返回作品集總覽</a>
+
+    <article class="project-section project-detail-section" aria-labelledby="cloud-title">
+      <header class="project-header project-detail-header">
+        <div>
+          <p class="project-index">Cloud Project Detail</p>
+          <h1 id="cloud-title">02｜PA360 雲端部署實作：AWS EC2 × Docker</h1>
+        </div>
+        <span class="project-badge">課程：雲端基礎架構</span>
+      </header>
+
+      <p class="project-positioning">PA360 的雲端延伸，呈現從系統開發到部署上線的實作能力。</p>
+
+      <section class="project-block" aria-labelledby="intro-title">
+        <h2 id="intro-title">專案簡介</h2>
+        <div class="text-stack">
+          <p>本作品延伸 <strong>PA360 360 度績效互評系統</strong>的開發成果，將原本於本機環境執行的 <strong>FastAPI</strong> 系統部署至 <strong>AWS EC2</strong> 雲端主機，並透過 <strong>Docker</strong> 與 <strong>Docker Compose</strong> 建立可重建、可重新啟動的容器化服務。</p>
+          <p>部署過程中，我實際完成 <strong>EC2 Ubuntu</strong> 執行個體建立、<strong>Security Group</strong> 網路規則設定、<strong>SSH</strong> 遠端連線、GitHub 專案下載、Docker 容器啟動、<strong>Nginx</strong> 反向代理設定，最終讓系統可透過外部瀏覽器公開存取，完整呈現從本機開發到雲端部署的實作流程。</p>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="showcase-title">
+        <h2 id="showcase-title">部署成果展示</h2>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>Demo｜雲端部署與系統公開存取展示</h3>
+            <p>下方影片展示 PA360 系統部署至 AWS EC2 後的實際成果，包括雲端主機環境、容器化服務啟動，以及透過外部瀏覽器公開存取系統頁面的驗證流程。</p>
+          </div>
+          <div class="video-frame">
+            <iframe
+              src=""
+              title="PA360 雲端部署與系統公開存取展示影片"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+            <div class="video-placeholder">YouTube Embed URL 預留區</div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>雲端部署架構圖</h3>
+            <p>此架構圖呈現 PA360 系統上雲後的主要運作流程，包含使用者瀏覽器、EC2 公網入口、Nginx 反向代理、Docker 容器、FastAPI 應用程式與 SQLite 資料庫之間的關係。</p>
+          </div>
+          <figure class="media-card media-card-wide">
+            <div class="image-placeholder" data-image="assets/images/projects/pa360-cloud-architecture.png">
+              雲端部署架構圖預留區
+            </div>
+            <figcaption>PA360 雲端部署架構圖</figcaption>
+          </figure>
+        </div>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>部署流程與成果畫面</h3>
+            <p>以下畫面呈現本專案在雲端部署過程中的重要實作節點，包含 AWS 主機建立、遠端連線與服務啟動，以及最終透過公開網址成功瀏覽系統的成果。</p>
+          </div>
+          <div class="screenshot-grid">
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-cloud-ec2-instance.png">EC2 主機建立畫面預留區</div>
+              <figcaption>建立 Ubuntu 雲端主機與取得公開 IP</figcaption>
+            </figure>
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-cloud-ssh-deploy.png">SSH 遠端部署畫面預留區</div>
+              <figcaption>透過終端機登入主機並執行部署指令</figcaption>
+            </figure>
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-cloud-docker-compose.png">Docker 容器啟動畫面預留區</div>
+              <figcaption>使用 Docker 建立可重建的服務環境</figcaption>
+            </figure>
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/pa360-cloud-public-access.png">公開網址瀏覽成果預留區</div>
+              <figcaption>成功透過公網網址瀏覽 PA360 系統</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="goals-title">
+        <h2 id="goals-title">部署目標</h2>
+        <div class="goal-grid">
+          <div class="info-card">
+            <h3>將本機專案成功上雲</h3>
+            <p>將原本於本地端執行的 PA360 FastAPI 系統部署至 AWS EC2，使其具備實際公開存取能力。</p>
+          </div>
+          <div class="info-card">
+            <h3>熟悉 EC2 主機設定與遠端連線流程</h3>
+            <p>實作 Ubuntu 主機建立、SSH 登入、安全群組設定與基本 Linux 操作，建立雲端主機管理經驗。</p>
+          </div>
+          <div class="info-card">
+            <h3>以 Docker 建立可重建的部署方式</h3>
+            <p>透過 Docker 與 Docker Compose 管理服務啟動流程，讓部署環境更容易重建、維護與更新。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="architecture-title">
+        <h2 id="architecture-title">雲端架構說明</h2>
+        <div class="text-stack">
+          <p>本專案採用 <strong>AWS EC2</strong> 作為雲端執行環境，於 Ubuntu 主機中部署 PA360 系統。外部使用者透過瀏覽器存取 EC2 公網入口，再由 Nginx 接收請求並轉發至 Docker 容器中的 FastAPI App。系統資料則由應用程式存取 SQLite Database 完成保存與讀取。</p>
+          <p>此架構雖屬小型部署方案，但完整涵蓋了 Web 系統上雲時的重要基礎概念，包括公開主機與網路存取、Web Server / Reverse Proxy、應用服務容器化、後端 API 運作與本機型資料庫儲存。</p>
+        </div>
+        <div class="flow-chain" aria-label="雲端部署流程">
+          <span>使用者瀏覽器</span>
+          <span>AWS EC2 公網 IP / Nginx</span>
+          <span>Docker Container</span>
+          <span>FastAPI App</span>
+          <span>SQLite Database</span>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="deploy-steps-title">
+        <h2 id="deploy-steps-title">實作部署流程</h2>
+        <ol class="process-list">
+          <li><strong>Step 1｜建立 AWS EC2 Ubuntu 執行個體</strong><br>選擇適合的 Ubuntu 映像檔，建立雲端虛擬主機作為部署環境。</li>
+          <li><strong>Step 2｜設定 Security Group 與 SSH 連線</strong><br>開放必要連線規則，並使用 SSH 金鑰安全登入雲端主機。</li>
+          <li><strong>Step 3｜Clone GitHub 專案</strong><br>於 EC2 主機中下載 PA360 專案原始碼，作為後續部署基礎。</li>
+          <li><strong>Step 4｜安裝 Docker 與 Docker Compose</strong><br>在 Ubuntu 主機中完成容器化工具安裝，準備執行應用服務。</li>
+          <li><strong>Step 5｜啟動容器化服務</strong><br>透過 Docker Compose 建立並啟動 FastAPI、Nginx 等相關服務。</li>
+          <li><strong>Step 6｜確認系統可由瀏覽器公開存取</strong><br>使用 EC2 公網 IP 或網頁入口驗證部署成果，確認系統可正常載入與操作。</li>
+        </ol>
+      </section>
+
+      <section class="project-block" aria-labelledby="tech-title">
+        <h2 id="tech-title">使用技術</h2>
+        <div class="tech-category-grid">
+          <div class="tech-category-card">
+            <h3>Cloud Infrastructure</h3>
+            <div class="tech-tags"><span>AWS EC2</span></div>
+          </div>
+          <div class="tech-category-card">
+            <h3>Operating System &amp; Remote Access</h3>
+            <div class="tech-tags"><span>Ubuntu</span><span>SSH</span></div>
+          </div>
+          <div class="tech-category-card">
+            <h3>Deployment &amp; Version Control</h3>
+            <div class="tech-tags"><span>Git</span><span>GitHub</span><span>Docker</span><span>Docker Compose</span></div>
+          </div>
+          <div class="tech-category-card">
+            <h3>Web Service</h3>
+            <div class="tech-tags"><span>Nginx</span><span>FastAPI</span></div>
+          </div>
+          <div class="tech-category-card">
+            <h3>Data Storage</h3>
+            <div class="tech-tags"><span>SQLite</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="issues-title">
+        <h2 id="issues-title">遇到的問題與學習</h2>
+        <div class="lesson-grid">
+          <div class="info-card">
+            <h3>Security Group Port 設定</h3>
+            <p><strong>問題情境：</strong>即使系統已在 EC2 主機中啟動，若 Security Group 未開放對應 Port，外部瀏覽器仍無法連線。</p>
+            <p><strong>學習收穫：</strong>理解雲端主機的服務可用性不只取決於應用程式是否啟動，也與網路規則與存取權限密切相關。</p>
+          </div>
+          <div class="info-card">
+            <h3>公網 IP 變更造成存取路徑不同</h3>
+            <p><strong>問題情境：</strong>EC2 執行個體停止再啟動後，公開 IPv4 可能改變，導致原先使用的測試網址失效。</p>
+            <p><strong>學習收穫：</strong>理解雲端主機公開 IP 可能變動，並開始建立部署前需重新確認連線資訊的習慣。</p>
+          </div>
+          <div class="info-card">
+            <h3>Docker 重新 Build 與服務重啟流程</h3>
+            <p><strong>問題情境：</strong>當專案程式碼更新後，需要重新 Build image 並啟動容器，否則雲端主機仍可能執行舊版本服務。</p>
+            <p><strong>學習收穫：</strong>熟悉容器化部署中的更新流程，理解程式碼更新、映像重建與服務重啟之間的關係。</p>
+          </div>
+          <div class="info-card">
+            <h3>Nginx 反向代理設定</h3>
+            <p><strong>問題情境：</strong>若 Nginx 路由或代理設定不正確，瀏覽器可能無法正確導向後端 FastAPI 服務。</p>
+            <p><strong>學習收穫：</strong>理解 Web Server 在部署架構中所扮演的入口角色，並初步建立反向代理的實作經驗。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block project-closing detail-closing" aria-labelledby="outcome-title">
+        <h2 id="outcome-title">專案成果與收穫</h2>
+        <ul class="learning-list">
+          <li>將 PA360 FastAPI 系統成功部署至 AWS EC2</li>
+          <li>完成 Ubuntu 主機與 SSH 遠端管理流程</li>
+          <li>使用 Docker / Docker Compose 建立容器化服務</li>
+          <li>透過 Nginx 完成 Web 入口轉發</li>
+          <li>成功由外部瀏覽器公開存取系統</li>
+          <li>建立對雲端部署問題排除的實務經驗</li>
+        </ul>
+        <div class="text-stack">
+          <p>透過本次部署實作，我將原本於本機開發完成的 PA360 系統進一步搬移至 AWS 雲端環境，完成從應用程式開發、雲端主機建置、容器化部署到公開網頁存取的完整過程。</p>
+          <p>這項作品讓我實際理解，一套系統要能真正被外部使用，除了功能本身之外，還需要處理主機環境、網路存取、部署流程、服務啟動與維護更新等問題。對我後續朝資訊系統開發、雲端應用與金融業 IT 方向發展而言，這是一項能具體呈現「開發與部署整合能力」的重要作品。</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
