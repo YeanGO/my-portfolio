@@ -13,7 +13,7 @@
 | `project-kaggle-0056.html` | 作品三「Kaggle 金融資料競賽：0056 收盤價預測」獨立作品詳細頁 | 已完成第一版 |
 | `learning-journey.html` | 學習歷程頁，整理技術轉型、研究所學習與作品對應成果 | 已完成第一版 |
 | `research.html` | 研究方向頁，聚焦隱私保護金融 AI 與同態加密詐欺偵測 | 已完成第一版 |
-| `resume.html` | 履歷頁 | 待製作 |
+| `resume.html` | 履歷頁，求職導向背景摘要與 PDF 履歷下載入口 | 已完成第一版 |
 
 ## 本階段重要架構決策
 
@@ -28,6 +28,7 @@
 6. 作品詳細頁上方需有「← 返回作品集總覽」連結，且 Navbar 的「作品集」需維持 Active 狀態。
 7. `learning-journey.html` 已建立為「技術轉型與學習成長故事頁」，不是單純課程清單，並將三門學習主軸對應到三個作品詳細頁。
 8. `research.html` 已建立為研究方向頁，敘事順序採「研究動機 → 研究問題 → 方法 → 進度 → 價值與未來」，Navbar 的「研究方向」維持 Active 狀態。
+9. `resume.html` 已建立為「求職導向個人背景摘要頁 + PDF 履歷下載入口」，不是傳統履歷表搬運，並串接作品、學習歷程與聯絡 CTA。
 
 ## 目前相關規格文件
 
@@ -51,6 +52,7 @@
 - 作品三詳細頁 `project-kaggle-0056.html` 第一版完成。
 - 學習歷程頁 `learning-journey.html` 第一版完成。
 - 研究方向頁 `research.html` 第一版完成。
+- 履歷頁 `resume.html` 第一版完成。
 - 共用 Navbar 與手機版漢堡選單。
 - 暗色科技風共用視覺樣式。
 - 桌機、平板、手機基本 RWD。
@@ -61,7 +63,7 @@
 
 待製作 / 待確認：
 
-- `resume.html` 尚未建立。
+- 正式 PDF 履歷檔案、Email 與 GitHub Profile URL 待補齊。
 
 ## Placeholder 與待替換素材
 
@@ -116,6 +118,14 @@ assets/images/projects/kaggle-0056-pipeline.png
 assets/images/research/privacy-preserving-fraud-detection-flow.png
 ```
 
+履歷頁 `resume.html` 目前預留內容：
+
+```text
+assets/resume/JY_Li_Resume.pdf
+your-email@example.com
+GitHub Profile URL
+```
+
 ## 檔案結構
 
 ```text
@@ -127,6 +137,7 @@ portfolio/
 ├── project-kaggle-0056.html
 ├── learning-journey.html
 ├── research.html
+├── resume.html
 ├── PROJECT_STATUS.md
 ├── css/
 │   ├── style.css
@@ -135,6 +146,7 @@ portfolio/
 │   ├── project-detail.css
 │   ├── learning-journey.css
 │   ├── research.css
+│   ├── resume.css
 │   └── responsive.css
 ├── js/
 │   └── main.js
@@ -152,6 +164,7 @@ portfolio/
 - `css/project-detail.css`：獨立作品詳細頁補充樣式，例如返回總覽連結、詳細頁標題與收束區塊。
 - `css/learning-journey.css`：學習歷程頁專屬樣式，包含 Timeline、學習卡片、能力版圖與學習到實作區塊。
 - `css/research.css`：研究方向頁專屬樣式，包含研究 Hero、研究問題、概念流程、方法卡片、研究進度與未來方向區塊。
+- `css/resume.css`：履歷頁專屬樣式，包含履歷 Hero、求職方向卡片、核心能力、代表作品、學歷進修、工作經歷與下載聯絡區。
 - `css/responsive.css`：共用 RWD 與首頁 RWD。
 
 ## JavaScript
@@ -170,6 +183,7 @@ http://127.0.0.1:8000/project-pa360-cloud.html
 http://127.0.0.1:8000/project-kaggle-0056.html
 http://127.0.0.1:8000/learning-journey.html
 http://127.0.0.1:8000/research.html
+http://127.0.0.1:8000/resume.html
 ```
 
 ## 下一步建議工作順序
@@ -178,4 +192,4 @@ http://127.0.0.1:8000/research.html
 2. 檢查 `projects.html` 是否正確連到三個作品詳細頁。
 3. 檢查 `learning-journey.html` 與三個作品詳細頁之間的 CTA 導向是否符合目前敘事。
 4. 補齊三個作品的圖片、系統架構圖 / 流程圖、YouTube 展示影片、GitHub 或 Kaggle 連結。
-5. 接續製作 `resume.html`。
+5. 補齊正式 PDF 履歷、Email、GitHub Profile URL 與各作品素材。
