@@ -129,6 +129,85 @@
   margin-top: 12px;
 }
 
+.competition-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px;
+  align-items: end;
+  padding: 22px;
+  border: 1px solid rgba(105, 232, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(7, 19, 31, 0.72);
+}
+
+.info-table {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.info-table div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(105, 232, 255, 0.1);
+}
+
+.info-table dt {
+  color: var(--color-accent-strong);
+  font-weight: 900;
+}
+
+.info-table dd {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.split-showcase {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.table-wrap {
+  margin-top: 22px;
+  overflow-x: auto;
+  border: 1px solid rgba(105, 232, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(7, 19, 31, 0.72);
+}
+
+.detail-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.detail-table th,
+.detail-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(105, 232, 255, 0.12);
+  text-align: left;
+  vertical-align: top;
+}
+
+.detail-table th {
+  color: var(--color-accent-strong);
+  font-size: 0.92rem;
+}
+
+.detail-table td {
+  color: var(--color-muted);
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
 @media (max-width: 760px) {
   .back-link {
     width: 100%;
@@ -143,6 +222,16 @@
   .tech-category-grid,
   .lesson-grid {
     grid-template-columns: 1fr;
+  }
+
+  .competition-panel,
+  .split-showcase,
+  .model-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competition-action .button {
+    width: 100%;
   }
 
   .flow-chain {
@@ -171,5 +260,10 @@
 
   .detail-closing {
     padding: 18px;
+  }
+
+  .info-table div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }

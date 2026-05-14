@@ -10,6 +10,7 @@
 | `projects.html` | 作品集總覽頁，提供作品入口與精簡專案介紹 | 已重製為總覽頁 |
 | `project-pa360.html` | 作品一「360 度績效互評系統」獨立作品詳細頁 | 已完成第一版 |
 | `project-pa360-cloud.html` | 作品二「PA360 雲端部署實作：AWS EC2 × Docker」獨立作品詳細頁 | 已完成第一版 |
+| `project-kaggle-0056.html` | 作品三「Kaggle 金融資料競賽：0056 收盤價預測」獨立作品詳細頁 | 已完成第一版 |
 | `learning-journey.html` | 學習歷程頁 | 待製作 |
 | `research.html` | 研究方向頁 | 待製作 |
 | `resume.html` | 履歷頁 | 待製作 |
@@ -41,20 +42,20 @@
 - 作品集總覽頁 `projects.html` 重製完成。
 - 作品一詳細頁 `project-pa360.html` 第一版完成。
 - 作品二詳細頁 `project-pa360-cloud.html` 第一版完成。
+- 作品三詳細頁 `project-kaggle-0056.html` 第一版完成。
 - 共用 Navbar 與手機版漢堡選單。
 - 暗色科技風共用視覺樣式。
 - 桌機、平板、手機基本 RWD。
 - `projects.html` 已連到：
   - 作品一：`project-pa360.html`
   - 作品二：`project-pa360-cloud.html`
-- 作品三已在 `projects.html` 顯示為「規劃中」與 disabled 狀態。
+  - 作品三：`project-kaggle-0056.html`
 
 待製作 / 待確認：
 
 - `learning-journey.html` 尚未建立。
 - `research.html` 尚未建立。
 - `resume.html` 尚未建立。
-- 第三作品尚未確認主題與詳細頁規格。
 
 ## Placeholder 與待替換素材
 
@@ -95,6 +96,14 @@ assets/images/projects/pa360-cloud-docker-compose.png
 assets/images/projects/pa360-cloud-public-access.png
 ```
 
+- 作品三 Kaggle 競賽 URL：目前在 `project-kaggle-0056.html` 中為 `href="#"`。
+- 作品三 Kaggle 成績截圖與預測流程圖仍為 placeholder：
+
+```text
+assets/images/projects/kaggle-0056-score.png
+assets/images/projects/kaggle-0056-pipeline.png
+```
+
 ## 檔案結構
 
 ```text
@@ -103,6 +112,7 @@ portfolio/
 ├── projects.html
 ├── project-pa360.html
 ├── project-pa360-cloud.html
+├── project-kaggle-0056.html
 ├── PROJECT_STATUS.md
 ├── css/
 │   ├── style.css
@@ -139,12 +149,13 @@ http://127.0.0.1:8000/index.html
 http://127.0.0.1:8000/projects.html
 http://127.0.0.1:8000/project-pa360.html
 http://127.0.0.1:8000/project-pa360-cloud.html
+http://127.0.0.1:8000/project-kaggle-0056.html
 ```
 
 ## 下一步建議工作順序
 
 1. 依據 `作品集總覽頁規格書_v_1.md` 檢查 `projects.html`，確認總覽頁結構、文案與 RWD 是否符合規格。
-2. 檢查 `projects.html` 是否正確連到 `project-pa360.html`，並確認作品三保持規劃中狀態。
-3. 檢查 `project-pa360-cloud.html` 的文案、RWD 與 placeholder 是否符合目前需求。
-4. 補齊作品一與作品二的圖片、系統架構圖、YouTube 展示影片與 GitHub 連結。
+2. 檢查 `projects.html` 是否正確連到三個作品詳細頁。
+3. 檢查 `project-pa360-cloud.html` 與 `project-kaggle-0056.html` 的文案、RWD 與 placeholder 是否符合目前需求。
+4. 補齊三個作品的圖片、系統架構圖 / 流程圖、YouTube 展示影片、GitHub 或 Kaggle 連結。
 5. 接續製作 `learning-journey.html`、`research.html`、`resume.html`。

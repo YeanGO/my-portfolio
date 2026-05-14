@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kaggle 0056 收盤價預測作品詳細頁，介紹金融資料前處理、特徵工程、模型比較與競賽提交流程。">
+  <title>Kaggle 0056 收盤價預測 | JY Li</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="主要導覽">
+      <a class="brand" href="index.html" aria-label="JY Li 首頁">JY Li</a>
+
+      <button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-controls="primary-menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="primary-menu">
+        <li><a class="nav-link" href="index.html">首頁</a></li>
+        <li><a class="nav-link active" href="projects.html" aria-current="page">作品集</a></li>
+        <li><a class="nav-link" href="learning-journey.html">學習歷程</a></li>
+        <li><a class="nav-link" href="research.html">研究方向</a></li>
+        <li><a class="nav-link" href="resume.html">履歷</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-detail-main">
+    <a class="back-link" href="projects.html">← 返回作品集總覽</a>
+
+    <article class="project-section project-detail-section" aria-labelledby="kaggle-title">
+      <header class="project-header project-detail-header">
+        <div>
+          <p class="project-index">Data &amp; AI Project Detail</p>
+          <h1 id="kaggle-title">03｜Kaggle 金融資料競賽：0056 收盤價預測</h1>
+        </div>
+        <span class="project-badge">課程：AI 人工智慧</span>
+      </header>
+
+      <p class="project-positioning">以金融市場資料為題，實作資料前處理、特徵工程與神經網路預測模型。</p>
+
+      <section class="project-block" aria-labelledby="intro-title">
+        <h2 id="intro-title">專案簡介</h2>
+        <div class="text-stack">
+          <p>本作品為課堂老師發起的 <strong>Kaggle 0056 收盤價預測競賽</strong>。競賽目標是根據某一期 <strong>0056 ETF 前十大持股成分股資料</strong>，建立模型預測 0056 的收盤價，並將結果提交至 Kaggle 平台進行評分。</p>
+          <p>在專案實作過程中，我從多份股票 CSV 檔案出發，先處理資料順序不一致、日期對應與缺失值問題，再建立訓練集與待預測資料，進行標準化與特徵整理。模型方面，先後嘗試 <strong>Linear Regression</strong>、<strong>Ridge Regression</strong>，最終採用 <strong>多層感知器神經網路 MLP</strong> 進行預測，並透過學習率調整策略改善競賽分數。</p>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="competition-title">
+        <h2 id="competition-title">競賽資訊</h2>
+        <div class="competition-panel">
+          <dl class="info-table">
+            <div><dt>競賽平台</dt><dd>Kaggle</dd></div>
+            <div><dt>競賽來源</dt><dd>課堂老師發起</dd></div>
+            <div><dt>任務類型</dt><dd>回歸預測</dd></div>
+            <div><dt>預測目標</dt><dd>0056 收盤價</dd></div>
+            <div><dt>輸入資料</dt><dd>0056 ETF 前十大持股成分股相關欄位</dd></div>
+            <div><dt>作品形式</dt><dd>競賽提交、模型比較與成績回饋</dd></div>
+          </dl>
+          <div class="competition-action">
+            <!-- TODO: Replace with actual Kaggle competition URL -->
+            <a class="button button-primary" href="#" target="_blank" rel="noopener noreferrer">查看 Kaggle 競賽頁面</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="showcase-title">
+        <h2 id="showcase-title">專案成果展示</h2>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>Competition Result｜Kaggle 提交成績</h3>
+            <p>本作品透過 Kaggle 平台驗證模型預測結果。專案實作並非只追求單次提交，而是在反覆調整資料前處理、特徵設計與模型架構後，逐步改善預測表現，完成從模型訓練到競賽提交的完整流程。</p>
+          </div>
+          <div class="split-showcase">
+            <figure class="media-card">
+              <div class="image-placeholder" data-image="assets/images/projects/kaggle-0056-score.png">Kaggle 提交成績截圖預留區</div>
+              <figcaption>Kaggle 提交成績</figcaption>
+            </figure>
+            <div class="info-card">
+              <h3>模型實驗與分數回饋</h3>
+              <p>此區後續可放入 Kaggle 排名、提交分數與實驗版本摘要，用來呈現模型從基準方法到 MLP 的改善歷程。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="block-heading">
+            <h3>預測流程概覽</h3>
+            <p>此流程圖呈現從原始股票資料整併、缺失值處理、特徵標準化、模型訓練，到產出 Kaggle 預測提交檔案的完整流程。</p>
+          </div>
+          <figure class="media-card media-card-wide">
+            <div class="image-placeholder" data-image="assets/images/projects/kaggle-0056-pipeline.png">
+              0056 收盤價預測流程圖預留區
+            </div>
+            <figcaption>0056 收盤價預測流程概覽</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="challenge-title">
+        <h2 id="challenge-title">問題理解與資料挑戰</h2>
+        <div class="text-stack">
+          <p>本競賽並不是直接提供一張已整理好的建模資料表，而是由多份股票資料檔案組成。初步檢視資料後發現，各 CSV 雖然列數相同，但資料順序已被打亂，因此不能直接依照原始列順序合併，必須先確認日期欄位是否正確對應。</p>
+          <p>此外，0056 收盤價欄位中僅有部分列具有真實值，其餘列為競賽需要預測的區段。因此專案實作必須同時處理：多檔資料對齊、缺失值補齊、訓練資料與待預測資料拆分，以及特徵與目標值的型態轉換。</p>
+          <p>這些前處理步驟直接影響後續模型表現，也是本專案最重要的基礎工作。</p>
+        </div>
+        <div class="lesson-grid">
+          <div class="info-card"><h3>資料順序被打亂</h3><p>不能直接依原始列順序合併資料。</p></div>
+          <div class="info-card"><h3>日期欄位需重新對齊</h3><p>需以 date 欄位確認各資料列的正確對應關係。</p></div>
+          <div class="info-card"><h3>缺失值需合理補齊</h3><p>補值策略會影響後續模型學習與競賽分數。</p></div>
+          <div class="info-card"><h3>訓練集與預測集需正確拆分</h3><p>需依 0056 收盤價是否存在區分訓練與提交資料。</p></div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="preprocess-title">
+        <h2 id="preprocess-title">資料前處理流程</h2>
+        <ol class="process-list">
+          <li><strong>檢視資料結構</strong><br>使用 <code>info()</code> 與 <code>head()</code> 檢查所有成分股資料與 0056.csv，確認每份檔案皆有 852 列，但順序不一致，因此需要另行對齊。</li>
+          <li><strong>依 date 欄位進行資料整併</strong><br>以 0056.csv 的 date 作為主要對應欄位，將 11 份資料整併成統一的 full_df。</li>
+          <li><strong>進行缺失值處理</strong><br>先將 0056_close_y 暫時移除，再對其他欄位以前一天值補齊；若仍有缺值，再使用後一天資料補上。處理完成後重新合併目標欄位。也曾嘗試以前後平均值補齊，但競賽分數較差，因此最終維持原方式。</li>
+          <li><strong>拆分訓練資料與預測資料</strong><br>依據 0056_close_y 是否有值，將資料拆分為 train_df 與 predict_df，其中待預測列數為 157 筆。</li>
+          <li><strong>建立特徵矩陣與目標陣列</strong><br>將 X_train、X_predict 轉為 NumPy 矩陣；將 y_train 重新 reshape 為模型可使用的格式。</li>
+          <li><strong>進行 StandardScaler 標準化</strong><br>由於不同欄位可能代表股價、漲跌幅、成交量等不同量級資料，因此使用 StandardScaler 對訓練特徵、預測特徵與目標值進行尺度轉換。</li>
+        </ol>
+      </section>
+
+      <section class="project-block" aria-labelledby="feature-title">
+        <h2 id="feature-title">特徵工程與實驗嘗試</h2>
+        <div class="text-stack">
+          <p>在特徵工程部分，初期先使用原始欄位搭配補值後的資料進行建模。之後進一步嘗試多種衍生特徵，希望提升模型對短期股價變動的理解能力，包括：對原有特徵建立 <strong>MA5 移動平均</strong>、嘗試使用 <strong>漲跌價差 × 成交量</strong>、嘗試加入 <strong>5 日收益率</strong>。</p>
+          <p>其中，MA5 讓原本 90 個特徵擴增為 180 個特徵；然而多次測試後，這些新增特徵並未帶來更佳的競賽成績，部分方法甚至讓結果略為下降。因此最終版本維持較穩定的初期特徵設計。</p>
+        </div>
+        <div class="table-wrap">
+          <table class="detail-table">
+            <thead><tr><th>特徵嘗試</th><th>設計想法</th><th>實驗結果</th></tr></thead>
+            <tbody>
+              <tr><td>MA5</td><td>捕捉短期趨勢</td><td>未明顯改善</td></tr>
+              <tr><td>漲跌價差 × 成交量</td><td>增強價格變動與交易量交互影響</td><td>略有下降</td></tr>
+              <tr><td>5 日收益率</td><td>加入短期報酬資訊</td><td>效果不佳</td></tr>
+              <tr><td>原始特徵 + 合理補值</td><td>保留資料穩定性</td><td>最終採用</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="model-title">
+        <h2 id="model-title">模型設計與訓練策略</h2>
+        <div class="model-grid">
+          <div class="info-card"><h3>基準思路：前一天收盤價</h3><p>一開始以「前一天收盤價」作為隔天預測值的簡單策略測試，接近但未通過 baseline。此方法可作為最初基準，但缺乏真正的模型學習意義。</p></div>
+          <div class="info-card"><h3>Linear Regression</h3><p>第二階段嘗試刪除缺失資料列，再使用 Linear Regression 建模。標準化前效果不佳；完成標準化後，成績剛好通過 baseline。</p></div>
+          <div class="info-card"><h3>Ridge Regression</h3><p>接著改用 Ridge Regression，嘗試透過正則化降低過擬合風險，也調整 alpha 參數並嘗試加入 MA5 特徵，但整體分數提升有限。</p></div>
+          <div class="info-card"><h3>MLP 神經網路</h3><p>最終版本採用三層結構、128 個神經元、前兩層使用 ReLU 的多層感知器 MLP，以較佳的非線性擬合能力處理股價預測任務。</p></div>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="tuning-title">
+        <h2 id="tuning-title">模型調整與競賽分數改善</h2>
+        <div class="text-stack">
+          <p>在神經網路模型的調整過程中，我並非單純增加模型規模，而是實際比較不同架構對競賽分數的影響。最終發現三層結構、128 神經元、ReLU 激活函數的版本表現最佳；增加為四層、256 神經元，並搭配 LeakyReLU 與較高 Dropout，反而沒有更好。</p>
+          <p>此外，訓練階段也比較了 Adam 與 AdamW、MSELoss 與 HuberLoss。最終維持 Optimizer：Adam、Loss：MSELoss，並加入學習率調整機制：每 100 次訓練將學習率乘以 0.7。報告指出，原本分數約在 35 左右，加入 scheduler 後改善至約 30，成為最終採用版本。</p>
+        </div>
+        <div class="table-wrap">
+          <table class="detail-table">
+            <thead><tr><th>調整項目</th><th>實驗方式</th><th>結果</th></tr></thead>
+            <tbody>
+              <tr><td>模型深度</td><td>3 層 vs 4 層</td><td>3 層較佳</td></tr>
+              <tr><td>神經元</td><td>128 vs 256</td><td>128 較佳</td></tr>
+              <tr><td>激活函數</td><td>ReLU vs LeakyReLU</td><td>ReLU 版本較佳</td></tr>
+              <tr><td>Optimizer</td><td>Adam vs AdamW</td><td>Adam 較佳</td></tr>
+              <tr><td>Loss</td><td>MSELoss vs HuberLoss</td><td>MSELoss 較佳</td></tr>
+              <tr><td>Scheduler</td><td>無 vs 每 100 次 × 0.7</td><td>有 scheduler 較佳</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="workflow-title">
+        <h2 id="workflow-title">競賽實作流程</h2>
+        <ol class="process-list">
+          <li>下載競賽資料並理解預測任務。</li>
+          <li>檢查各 CSV 結構與日期對應問題。</li>
+          <li>依 date 整併成分股與 0056 資料。</li>
+          <li>進行缺失值補齊與資料清理。</li>
+          <li>拆分訓練集與待預測資料。</li>
+          <li>建立特徵矩陣與目標值。</li>
+          <li>使用 StandardScaler 進行標準化。</li>
+          <li>比較 Linear Regression、Ridge、MLP 模型。</li>
+          <li>依 Kaggle 分數回饋調整特徵與訓練方式。</li>
+          <li>產出 submission 檔案並提交競賽結果。</li>
+        </ol>
+      </section>
+
+      <section class="project-block" aria-labelledby="tech-title">
+        <h2 id="tech-title">技術實作</h2>
+        <div class="tech-category-grid">
+          <div class="tech-category-card"><h3>Data Processing</h3><div class="tech-tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>StandardScaler</span></div></div>
+          <div class="tech-category-card"><h3>Machine Learning</h3><div class="tech-tags"><span>Scikit-learn</span><span>Linear Regression</span><span>Ridge Regression</span></div></div>
+          <div class="tech-category-card"><h3>Deep Learning / Competition</h3><div class="tech-tags"><span>PyTorch</span><span>MLP 神經網路</span><span>Adam Optimizer</span><span>MSELoss</span><span>Learning Rate Scheduler</span><span>Kaggle Submission Workflow</span></div></div>
+        </div>
+      </section>
+
+      <section class="project-block project-closing detail-closing" aria-labelledby="learning-title">
+        <h2 id="learning-title">專案成果與學習收穫</h2>
+        <div class="text-stack">
+          <p>透過本次 Kaggle 競賽，我不只完成一次金融資料預測任務，更完整經歷了資料科學專案中最關鍵的流程：從資料檢查、前處理、補值策略、特徵設計，到模型比較與訓練調整。</p>
+        </div>
+        <ul class="learning-list">
+          <li>模型表現高度依賴資料整理品質</li>
+          <li>標準化對金融欄位有明顯影響</li>
+          <li>新增特徵需以實驗結果驗證</li>
+          <li>更深、更大的模型未必更好</li>
+          <li>競賽實作能建立務實調整思維</li>
+        </ul>
+        <div class="text-stack">
+          <p>這個作品讓我首次較完整地實踐了「金融資料分析與機器學習預測」的工作流程，也成為我後續持續探索金融科技與資料建模的重要起點。</p>
+        </div>
+      </section>
+
+      <section class="project-block" aria-labelledby="improve-title">
+        <h2 id="improve-title">後續可改進方向</h2>
+        <div class="feature-grid">
+          <div class="info-card"><h3>更系統化的特徵組合策略</h3></div>
+          <div class="info-card"><h3>不同時間窗的移動平均與報酬率比較</h3></div>
+          <div class="info-card"><h3>特徵選擇或重要度分析</h3></div>
+          <div class="info-card"><h3>交叉驗證與更穩定的模型評估</h3></div>
+          <div class="info-card"><h3>加入時間序列模型或序列式深度學習方法</h3></div>
+          <div class="info-card"><h3>針對金融資料特性設計更合理的驗證方式</h3></div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>JY Li Portfolio · Systems, Cloud, Data</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
