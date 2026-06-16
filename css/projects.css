@@ -280,6 +280,16 @@ strong {
   aspect-ratio: 16 / 9;
 }
 
+.media-card-wide img,
+.media-card-wide iframe {
+  aspect-ratio: 16 / 9;
+}
+
+.media-card-contain img {
+  object-fit: contain;
+  background: rgba(7, 20, 33, 0.92);
+}
+
 .media-card figcaption {
   padding: 14px 16px;
   color: var(--color-text);
