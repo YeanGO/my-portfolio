@@ -262,6 +262,20 @@ strong {
   background-size: 28px 28px;
 }
 
+.media-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.media-card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+}
+
 .media-card-wide .image-placeholder {
   aspect-ratio: 16 / 9;
 }
