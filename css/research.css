@@ -259,15 +259,14 @@
 
 .concept-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 22px;
-  align-items: stretch;
   margin-top: 24px;
 }
 
 .process-steps {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .research-placeholder-card {
@@ -305,6 +304,14 @@
   color: rgba(168, 183, 199, 0.42);
   font-size: 0.78rem;
   font-weight: 600;
+}
+
+.research-flow-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: rgba(7, 20, 33, 0.92);
 }
 
 .research-placeholder-card figcaption {
@@ -413,8 +420,8 @@
     grid-template-columns: 1fr;
   }
 
-  .concept-layout {
-    grid-template-columns: 1fr;
+  .process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -429,6 +436,7 @@
     opacity: 0.3;
   }
 
+  .process-steps,
   .tool-grid,
   .compare-grid,
   .method-columns {

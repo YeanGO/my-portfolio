@@ -171,6 +171,18 @@
   align-items: stretch;
 }
 
+.result-gallery {
+  display: grid;
+  gap: 18px;
+}
+
+.result-card img {
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: rgba(7, 20, 33, 0.92);
+}
+
 .table-wrap {
   margin-top: 22px;
   overflow-x: auto;
